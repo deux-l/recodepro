@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consulta usuarios</title>
+</head>
+<body>
+    <h1>Usuarios cadastrados</h1>
+    <strong>Id-nome-senha-email-usuario</strong>
+    <% if(dados.length > 0){ %>
+        <% for(i=0;i<dados.length;i++){ %>
+            <p><%=dados[i].id %> - <%=dados[i].nome %> - <%=dados[i].senha %> - <%=dados[i].email %> - <%=dados[i].usuario %></p>
+        <%}}else{%>
+            <h2>Nenhum dado encontrado!</h2>
+        <%}%>         
+    <br/>
+    
+    <!-- <h2>Buscar usuario:</h2>
+    <form method="POST" action="/usuarios/buscar/email">
+        Buscar email: <input type="text" name='email'>
+            <input type="submit" value='pesquisar...'>
+    </form>
+    <br/>
+    <form method="POST" action="/usuarios/buscar/id">
+        Buscar ID: <input type="text" name='id'>
+            <input type="submit" value='pesquisar...'>
+    </form>
+    <br/> -->
+    <h2>Cadastrar Usuario</h2>
+    <a href="/usuariocad">Cadastrar Usuario</a>
+</body>
+</html>

@@ -1,4 +1,4 @@
-#Lista de compras
+# Lista de compras
 
 Para testar, instalar dependencias com 'npm install. Para rodar, "npm start" para que os três scripts do package.json rodem juntos(webpackWatch&bundle_server/client.js).
 

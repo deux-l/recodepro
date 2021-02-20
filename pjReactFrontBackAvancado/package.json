@@ -1,0 +1,33 @@
+{
+  "name": "pjreactfrontbackavancado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack:server": "webpack --config webpack.server.js --watch",
+    "webpack:client": "webpack --config webpack.config.js --watch",
+    "serve": "nodemon ./dist/bundle_server.js",
+    "start": "npm-run-all --parallel serve webpack:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.17",
+    "@babel/core": "^7.12.17",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

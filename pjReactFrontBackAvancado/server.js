@@ -9,7 +9,8 @@ import AppComponent from "./src/App";
 const app = express();
 
 //Code splitting
-import Header from './Header'
+// import Header from './Header'
+const Header = lazy(() => import('./Header'));
 
 app.use(express.static('dist/public'))
 
@@ -25,7 +26,12 @@ app.get("/", function (req, res) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <center>
-    ${ReactDOM.renderToString(<Header />)}
+  
+     <Suspense fallback={ <p>Carregando...</p> }>
+     ${ReactDOM.renderToString(<Header />)}
+    <Suspense/>
+     
+    
     <hr />
     <body>
         <div id="app">
